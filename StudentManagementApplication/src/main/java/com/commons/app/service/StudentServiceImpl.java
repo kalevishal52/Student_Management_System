@@ -126,11 +126,15 @@ public class StudentServiceImpl implements StudentService {
 	public Student validateStudentIdAndDOB(Integer studentId,LocalDate dob) {
 		
 		Optional<Student> studentOpt = studentRepo.findById(studentId);
+		System.out.println(studentOpt.isEmpty());
 		if(studentOpt.isEmpty()) 
 			return null;
 		
 		Student student = studentOpt.get();
 		
+		System.out.println(dob.equals(student.getDob()));
+		System.out.println(dob);
+		System.out.println(student.getDob());
 		if(!dob.equals(student.getDob())) 
 			return null;
 		

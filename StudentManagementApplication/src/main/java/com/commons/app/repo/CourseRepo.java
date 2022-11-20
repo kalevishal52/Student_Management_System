@@ -11,6 +11,6 @@ import com.commons.app.model.Course;
 @Repository
 public interface CourseRepo extends JpaRepository<Course, Integer> {
 
-	@Query("from Course c where c.topics LIKE %:topic% ")
+	@Query("from Course c where c.topics LIKE %:topic% OR c.courseName LIKE %:topic% ")
 	public List<Course> getCoursesByTopic(String topic) ;
 }

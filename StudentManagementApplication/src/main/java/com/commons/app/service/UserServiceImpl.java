@@ -2,6 +2,7 @@ package com.commons.app.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.commons.app.exception.AdminExcepttion;
@@ -19,6 +20,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private ModelMapper modelMapper;
 	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
 	@Override
 	public UserDTO registerUser(UserDTO userDTO) throws UserException {
 		
@@ -27,12 +31,14 @@ public class UserServiceImpl implements UserService {
 		}
 		
 		userDTO.setRole("ROLE_"+userDTO.getRole());
+		userDTO.setPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
 		
 		User user = dtoToUser(userDTO);
 		user = userRepo.save(user);
 		
 		UserDTO registerUser = userToDTO(user);
 		return registerUser;
+		
 	}
 	
 	public User dtoToUser(UserDTO userDTO) {

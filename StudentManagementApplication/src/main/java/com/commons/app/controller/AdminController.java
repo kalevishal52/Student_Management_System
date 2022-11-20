@@ -15,13 +15,13 @@ import com.commons.app.service.UserService;
 
 
 @RestController
-@RequestMapping("/admin")
+//@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/register")
+	@PostMapping("/admin/register")
 	public ResponseEntity<UserDTO> registerAdminHandler(@RequestBody UserDTO userDTO	) throws AdminExcepttion, UserException {
 		
 		UserDTO registeredUser =  userService.registerUser(userDTO) ;

@@ -29,7 +29,7 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer studentId;
 	private String name;
-	private String fathersFullName;
+	private String fatherName;
 	private String email;
 	private String mobileNumber;
 	private LocalDate dob;
@@ -44,7 +44,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", fathersFullName=" + fathersFullName + ", email=" + email + ", mobileNumber="
+		return "Student [name=" + name + ", fatherName=" + fatherName + ", email=" + email + ", mobileNumber="
 				+ mobileNumber + ", dob=" + dob + ", gender=" + gender + ", unique_student_code=" + unique_student_code
 				+ ", address=" + address + "]";
 	}

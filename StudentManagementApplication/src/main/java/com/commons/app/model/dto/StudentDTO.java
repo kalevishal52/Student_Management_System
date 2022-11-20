@@ -27,7 +27,7 @@ public class StudentDTO {
 	
 	private Integer studentId;
 	private String name;
-	private String fathersFullName;
+	private String fatherName;
 	private String email;
 	private String mobileNumber;
 	private LocalDate dob;
