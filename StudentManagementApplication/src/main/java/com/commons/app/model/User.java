@@ -13,15 +13,32 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Admin {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer adminId;
+	private Integer userId;
 	
 	private String name;
 	private String mobileNumber;
 	private String password;
 	private String role;
+	
+	public User(String name, String mobileNumber, String password, String role) {
+		super();
+		this.name = name;
+		this.mobileNumber = mobileNumber;
+		this.password = password;
+		this.role = role;
+	}
+
+	public User(String name, String mobileNumber, String password) {
+		super();
+		this.name = name;
+		this.mobileNumber = mobileNumber;
+		this.password = password;
+	}
+	
+	
 	
 }

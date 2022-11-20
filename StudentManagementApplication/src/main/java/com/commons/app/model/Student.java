@@ -28,8 +28,10 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer studentId;
-	private String firstName;
-	private String lastName;
+	private String name;
+	private String fathersFullName;
+	private String email;
+	private String mobileNumber;
 	private LocalDate dob;
 	private Gender gender;
 	private String unique_student_code;
@@ -39,4 +41,16 @@ public class Student {
 	
 	@ManyToMany(cascade = CascadeType.ALL,mappedBy = "students")
 	List<Course> courses = new ArrayList<>();
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", fathersFullName=" + fathersFullName + ", email=" + email + ", mobileNumber="
+				+ mobileNumber + ", dob=" + dob + ", gender=" + gender + ", unique_student_code=" + unique_student_code
+				+ ", address=" + address + "]";
+	}
+
+	
+	
+	
+	
 }

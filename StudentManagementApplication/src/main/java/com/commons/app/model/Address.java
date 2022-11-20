@@ -22,8 +22,9 @@ public class Address {
 	private Integer addressId;
 	
 	private String area;
+	private String city;
 	private String state;
-	private String districe;
+	private String district;
 	private String pincode;
 	private AddressType addressType;
 	
