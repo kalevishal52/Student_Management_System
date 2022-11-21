@@ -2,6 +2,9 @@
 
 In this application, we can manage student data, and course data. Admin can add students, courses, and can manage these entities, students can get the courses they are assigned in and can drop from a particular course.
 
+# ER Diagram
+[![SwaggerUI](https://github.com/kalevishal52/Student_Management_System/blob/main/StudentManagementApplication/Images/ER%20Diagram%20Student%20Management.png?raw=true)](https://github.com/kalevishal52/Student_Management_System/blob/main/StudentManagementApplication/Images/ER%20Diagram%20Student%20Management.png?raw=true)
+
 # Functionalities
 -   Layered architecture
 -   Admin can register/login
@@ -162,3 +165,4 @@ spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
 
 ## Course Controller
 [![SwaggerUI](https://github.com/kalevishal52/Movie_Ticket_Booking_Application_Backend/blob/main/images/Images/s1.png?raw=true)](https://github.com/kalevishal52/Movie_Ticket_Booking_Application_Backend/blob/main/images/Images/s1.png?raw=true)
+
