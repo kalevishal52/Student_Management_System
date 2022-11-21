@@ -123,18 +123,32 @@ public class StudentServiceImpl implements StudentService {
 	}
 	
 	
+	@Override
+	public StudentDTO addNewAddress(StudentAddressDTO addressDTO) throws StudentException {
+		
+		Student student =  validateStudentIdAndDOB(addressDTO.getStudentId(), addressDTO.getDob());
+		List<Address> addressList =  student.getAddress();
+		
+		List<Address> filterAddress = addressList.stream().filter(address -> address.getAddressType().equals(addressDTO.getAddress().getAddressType())).collect(Collectors.toList());
+		if(filterAddress.size() != 0) 
+			throw new StudentException("Address type : "+ addressDTO.getAddress().getAddressType() +" is already added!. You have to update the address") ;
+		
+		student.getAddress().add(addressDTO.getAddress()) ;
+		Student updateStudent = studentRepo.save(student) ;
+		
+		return studentToDTO(updateStudent);
+	}
+	
+	
 	public Student validateStudentIdAndDOB(Integer studentId,LocalDate dob) {
 		
 		Optional<Student> studentOpt = studentRepo.findById(studentId);
-		System.out.println(studentOpt.isEmpty());
+		
 		if(studentOpt.isEmpty()) 
 			return null;
 		
 		Student student = studentOpt.get();
 		
-		System.out.println(dob.equals(student.getDob()));
-		System.out.println(dob);
-		System.out.println(student.getDob());
 		if(!dob.equals(student.getDob())) 
 			return null;
 		
@@ -183,7 +197,7 @@ public class StudentServiceImpl implements StudentService {
 		return coursesToStudentCourse(student.getCourses(), student);
 	}
 	
-	
+	@Override
 	public StudentCourse coursesToStudentCourse(List<Course> courses,Student student) {
 		
 		StudentCourse studentCourse = new StudentCourse();

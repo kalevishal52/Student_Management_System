@@ -1,0 +1,506 @@
+{
+  "address": [
+    {
+      "addressId": 0,
+      "addressType": "CURRENT",
+      "area": "Madha Road",
+      "city": "Kurduwadi",
+      "district": "Solapur",
+      "pincode": "413208",
+      "state": "Maharashtra"
+    }
+  ],
+  "dob": "2000-12-20",
+  "email": "kale@gmail.com",
+  "fatherName": "Sahadev Kale",
+  "gender": "MALE",
+  "mobileNumber": "8999712976",
+  "name": "Vishal Sahadev Kale",
+  "studentId": 0
+}
+=>
+{
+  "studentId": 5,
+  "name": "Vishal Sahadev Kale",
+  "fatherName": "Sahadev Kale",
+  "email": "kale@gmail.com",
+  "mobileNumber": "8999712976",
+  "dob": "2000-12-20",
+  "gender": "MALE",
+  "address": [
+    {
+      "addressId": 6,
+      "area": "Madha Road",
+      "city": "Kurduwadi",
+      "state": "Maharashtra",
+      "district": "Solapur",
+      "pincode": "413208",
+      "addressType": "CURRENT"
+    }
+  ]
+}
+
+============
+
+
+{
+  "address": [
+    {
+      "addressId": 0,
+      "addressType": "CURRENT",
+      "area": "Kurduwadi Road",
+      "city": "Kurdu",
+      "district": "Solapur",
+      "pincode": "413208",
+      "state": "Maharashtra"
+    }
+  ],
+  "dob": "2001-02-03",
+  "email": "zagade@gmail.com",
+  "fatherName": "Ashok Zagade",
+  "gender": "MALE",
+  "mobileNumber": "8999712977",
+  "name": "Abhinay Ashok Zagade",
+  "studentId": 0
+}
+=>
+{
+  "studentId": 7,
+  "name": "Abhinay Ashok Zagade",
+  "fatherName": "Ashok Zagade",
+  "email": "zagade@gmail.com",
+  "mobileNumber": "8999712977",
+  "dob": "2001-02-03",
+  "gender": "MALE",
+  "address": [
+    {
+      "addressId": 8,
+      "area": "Kurduwadi Road",
+      "city": "Kurdu",
+      "state": "Maharashtra",
+      "district": "Solapur",
+      "pincode": "413208",
+      "addressType": "CURRENT"
+    }
+  ]
+}
+
+
+===========
+
+{
+  "address": [
+    {
+      "addressId": 0,
+      "addressType": "CURRENT",
+      "area": "Near Nutan Scholl",
+      "city": "Kurduwadi",
+      "district": "Solapur",
+      "pincode": "413208",
+      "state": "Maharashtra"
+    }
+  ],
+  "dob": "2000-02-29",
+  "email": "jagtap@gmail.com",
+  "fatherName": "Pradeep Jagtap",
+  "gender": "MALE",
+  "mobileNumber": "9999712978",
+  "name": "Praneet Pradeep Jagtap",
+  "studentId": 0
+}
+=>
+{
+  "studentId": 9,
+  "name": "Praneet Pradeep Jagtap",
+  "fatherName": "Pradeep Jagtap",
+  "email": "jagtap@gmail.com",
+  "mobileNumber": "9999712978",
+  "dob": "2000-02-29",
+  "gender": "MALE",
+  "unique_student_code": null,
+  "address": [
+    {
+      "addressId": 10,
+      "area": "Near Nutan Scholl",
+      "city": "Kurduwadi",
+      "state": "Maharashtra",
+      "district": "Solapur",
+      "pincode": "413208",
+      "addressType": "CURRENT"
+    }
+  ]
+}
+
+================
+
+{
+  "address": [
+    {
+      "addressId": 0,
+      "addressType": "CURRENT",
+      "area": "Satav Colny",
+      "city": "Kurduwadi",
+      "district": "Solapur",
+      "pincode": "413208",
+      "state": "Maharashtra"
+    }
+  ],
+  "dob": "2003-05-16",
+  "email": "gore@gmail.com",
+  "fatherName": "Narshiv Gore",
+  "gender": "MALE",
+  "mobileNumber": "8499712978",
+  "name": "Prateek Narshiv Gore",
+  "studentId": 0
+}
+=>
+{
+  "studentId": 11,
+  "name": "Prateek Narshiv Gore",
+  "fatherName": "Narshiv Gore",
+  "email": "gore@gmail.com",
+  "mobileNumber": "8499712978",
+  "dob": "2003-05-16",
+  "gender": "MALE",
+  "unique_student_code": null,
+  "address": [
+    {
+      "addressId": 12,
+      "area": "Satav Colny",
+      "city": "Kurduwadi",
+      "state": "Maharashtra",
+      "district": "Solapur",
+      "pincode": "413208",
+      "addressType": "CURRENT"
+    }
+  ]
+}
+
+====+
+
+{
+  "courseId": 0,
+  "courseName": "Java Backend Development",
+  "courseType": "Live",
+  "description": "The course is designed for every person from beginner to advance level",
+  "duration": "8 Months",
+  "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+}
+=>
+{
+  "courseId": 2,
+  "courseName": "Java Backend Development",
+  "description": "The course is designed for every person from beginner to advance level",
+  "courseType": "Live",
+  "duration": "8 Months",
+  "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+}
+
+
+
+{
+  "courseId": 0,
+  "courseName": "Full Stack Web Development",
+  "courseType": "Live",
+  "description": "The course is designed for every person from beginner to advance level",
+  "duration": "9 Months",
+  "topics": "JavaScript, HTML, CSS, NodeJS, React"
+}
+=>
+{
+  "courseId": 4,
+  "courseName": "Full Stack Web Development",
+  "description": "The course is designed for every person from beginner to advance level",
+  "courseType": "Live",
+  "duration": "9 Months",
+  "topics": "JavaScript, HTML, CSS, NodeJS, React"
+}
+
+
+============
+> assginStudentToCourseHandler
+
+=>
+{
+  "name": "Vishal Sahadev Kale",
+  "courses": [
+    {
+      "courseId": 5,
+      "courseName": "Java Backend Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "8 Months",
+      "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+    },
+    {
+      "courseId": 6,
+      "courseName": "Full Stack Web Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "9 Months",
+      "topics": "JavaScript, HTML, CSS, NodeJS, React"
+    }
+  ],
+  "studentId": 1
+}
+
+==========
+{
+  "name": "Abhijeet Sahadev Kale",
+  "courses": [
+    {
+      "courseId": 6,
+      "courseName": "Full Stack Web Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "9 Months",
+      "topics": "JavaScript, HTML, CSS, NodeJS, React"
+    }
+  ],
+  "studentId": 3
+}
+
+
+========================
+> getStudentsFromCorseHandler 
+
+{
+  "courseId": 4,
+  "courseName": "Full Stack Web Development",
+  "description": "The course is designed for every person from beginner to advance level",
+  "courseType": "Live",
+  "duration": "9 Months",
+  "topics": "JavaScript, HTML, CSS, NodeJS, React",
+  "studentList": [
+    {
+      "studentId": 5,
+      "name": "Vishal Sahadev Kale",
+      "fatherName": "Sahadev Kale",
+      "email": "kale@gmail.com",
+      "mobileNumber": "8999712976",
+      "dob": "2000-12-20",
+      "gender": "MALE",
+      "unique_student_code": "string",
+      "address": [
+        {
+          "addressId": 6,
+          "area": "Madha Road",
+          "city": "Kurduwadi",
+          "state": "Maharashtra",
+          "district": "Solapur",
+          "pincode": "413208",
+          "addressType": "CURRENT"
+        }
+      ]
+    },
+    {
+      "studentId": 7,
+      "name": "Abhinay Ashok Zagade",
+      "fatherName": "Ashok Zagade",
+      "email": "zagade@gmail.com",
+      "mobileNumber": "8999712977",
+      "dob": "2001-02-03",
+      "gender": "MALE",
+      "unique_student_code": null,
+      "address": [
+        {
+          "addressId": 8,
+          "area": "Kurduwadi Road",
+          "city": "Kurdu",
+          "state": "Maharashtra",
+          "district": "Solapur",
+          "pincode": "413208",
+          "addressType": "CURRENT"
+        }
+      ]
+    },
+    {
+      "studentId": 9,
+      "name": "Praneet Pradeep Jagtap",
+      "fatherName": "Pradeep Jagtap",
+      "email": "jagtap@gmail.com",
+      "mobileNumber": "9999712978",
+      "dob": "2000-02-29",
+      "gender": "MALE",
+      "unique_student_code": null,
+      "address": [
+        {
+          "addressId": 10,
+          "area": "Near Nutan Scholl",
+          "city": "Kurduwadi",
+          "state": "Maharashtra",
+          "district": "Solapur",
+          "pincode": "413208",
+          "addressType": "CURRENT"
+        }
+      ]
+    },
+    {
+      "studentId": 11,
+      "name": "Prateek Narshiv Gore",
+      "fatherName": "Narshiv Gore",
+      "email": "gore@gmail.com",
+      "mobileNumber": "8499712978",
+      "dob": "2003-05-16",
+      "gender": "MALE",
+      "unique_student_code": null,
+      "address": [
+        {
+          "addressId": 12,
+          "area": "Satav Colny",
+          "city": "Kurduwadi",
+          "state": "Maharashtra",
+          "district": "Solapur",
+          "pincode": "413208",
+          "addressType": "CURRENT"
+        }
+      ]
+    }
+  ]
+}
+
+=======================================================
+
+=====================
+PostMan Admin
+{
+    "userId": 1,
+    "name": "Vishal Kale",
+    "mobileNumber": "8999712976",
+    "password": "$2a$10$W.voyfiLVKfrB3u.BM.iRO6I6BN9qik8JNx9Ux./2dEu57.5ZS.rO",
+    "role": "ROLE_ADMIN"
+}
+
+
+===============================================
+> getStudentCoursesHandler
+> http://localhost:8888/students/courses?studentId=5&dob%2Cdd-MM-yyyy=20-12-2000
+
+{
+  "name": "Vishal Sahadev Kale",
+  "courses": [
+    {
+      "courseId": 2,
+      "courseName": "Java Backend Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "8 Months",
+      "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+    },
+    {
+      "courseId": 3,
+      "courseName": "Java Backend Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "8 Months",
+      "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+    },
+    {
+      "courseId": 4,
+      "courseName": "Full Stack Web Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "9 Months",
+      "topics": "JavaScript, HTML, CSS, NodeJS, React"
+    }
+  ],
+  "studentId": 5
+}
+
+
+============================================
+> leaveCourseHandler
+> http://localhost:8888/students/courses?studentId=5&dob%2Cdd-MM-yyyy=20-12-2000&courseId=3
+
+{
+  "name": "Vishal Sahadev Kale",
+  "courses": [
+    {
+      "courseId": 2,
+      "courseName": "Java Backend Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "8 Months",
+      "topics": "Java Core, Hibernate, JDBC, Spring, SpringBoot"
+    },
+    {
+      "courseId": 4,
+      "courseName": "Full Stack Web Development",
+      "description": "The course is designed for every person from beginner to advance level",
+      "courseType": "Live",
+      "duration": "9 Months",
+      "topics": "JavaScript, HTML, CSS, NodeJS, React"
+    }
+  ],
+  "studentId": 5
+}
+
+
+===========================================
+
+{
+  "dob": "2000-12-20",
+  "newEmail": "vishalkale@gmail.com",
+  "newMobileNumber": "8308255776",
+  "studentId": 5
+}
+=>
+{
+    "studentId": 5,
+    "name": "Vishal Sahadev Kale",
+    "fatherName": "Sahadev Kale",
+    "email": "vishalkale@gmail.com",
+    "mobileNumber": "8308255776",
+    "dob": "2000-12-20",
+    "gender": "MALE",
+    "unique_student_code": "string",
+    "address": [
+        {
+            "addressId": 6,
+            "area": "Madha Road",
+            "city": "Kurduwadi",
+            "state": "Maharashtra",
+            "district": "Solapur",
+            "pincode": "413208",
+            "addressType": "CURRENT"
+        }
+    ]
+}
+
+
+=====================================
+{
+  "address": {
+   "addressId": 6,
+      "area": "Satav Nagar",
+      "city": "Baramati",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "pincode": "413200",
+      "addressType": "CURRENT"
+  },
+  "dob": "2000-12-20",
+  "studentId": 5
+}
+=>
+{
+  "studentId": 5,
+  "name": "Vishal Sahadev Kale",
+  "fatherName": "Sahadev Kale",
+  "email": "vishalkale@gmail.com",
+  "mobileNumber": "8308255776",
+  "dob": "2000-12-20",
+  "gender": "MALE",
+  "unique_student_code": "string",
+  "address": [
+    {
+      "addressId": 6,
+      "area": "Satav Nagar",
+      "city": "Baramati",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "pincode": "413200",
+      "addressType": "CURRENT"
+    }
+  ]
+}

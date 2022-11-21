@@ -33,7 +33,7 @@ public class CourseServiceImpl implements CourseService {
 	
 	@Override
 	public CourseDTO addCourse(CourseDTO courseDTO) throws CourseException {
-		
+			
 		Course course = dtoToCourse(courseDTO);
 		course = courseRepo.save(course) ;
 		
@@ -51,19 +51,7 @@ public class CourseServiceImpl implements CourseService {
 		
 		List<Course> studentCourses =  studentService.getAllCoursesAdminPurpose(studentId);
 		
-		StudentCourse studentCourseDetails = new StudentCourse();
-		studentCourseDetails.setStudentId(studentId);
-		studentCourseDetails.setName(student.getName());
-		
-		List<CourseDTO> courseDTOList = new ArrayList<>();
-		for(Course singleCourse : studentCourses) {
-			
-			CourseDTO dto = new CourseDTO();
-			BeanUtils.copyProperties(singleCourse, dto);
-			courseDTOList.add(dto) ;
-		}
-		
-		studentCourseDetails.setCourses(courseDTOList);
+		StudentCourse studentCourseDetails = studentService.coursesToStudentCourse(studentCourses, student);
 		
 		return studentCourseDetails;
 	}
@@ -98,6 +86,18 @@ public class CourseServiceImpl implements CourseService {
  		return dtoList;
 	}
 	
+	
+	@Override
+	public CourseDTO removeCourse(Integer courseId) throws CourseException {
+		
+		Course course =  courseRepo.findById(courseId).orElseThrow(()-> new CourseException("Invalid CourseId: "+courseId)) ;
+		
+		courseRepo.delete(course);
+		
+		return courseToDTO(course);
+	}
+	
+	
 	public Course dtoToCourse(CourseDTO courseDTO) {
 		return this.modelMapper.map(courseDTO, Course.class);
 	}
@@ -109,8 +109,6 @@ public class CourseServiceImpl implements CourseService {
 	public StudentDTO studentToDTO(Student student) {
 		return this.modelMapper.map(student, StudentDTO.class);
 	}
-
-
 
 }
 

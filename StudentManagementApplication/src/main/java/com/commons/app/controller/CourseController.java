@@ -2,10 +2,13 @@ package com.commons.app.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -28,13 +31,13 @@ public class CourseController {
 	
 	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/courses/")
-	public ResponseEntity<CourseDTO> addCourseHandler(@RequestBody CourseDTO courseDTO) throws CourseException {
+	public ResponseEntity<CourseDTO> addCourseHandler(@Valid @RequestBody CourseDTO courseDTO) throws CourseException {
 		
 		CourseDTO savedCourse = courseService.addCourse(courseDTO);
 		
 		return new ResponseEntity<CourseDTO>(savedCourse,HttpStatus.CREATED) ;
 	}
-	
+	 
 	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/courses/assgign")
 	public ResponseEntity<StudentCourse> assginStudentToCourseHandler(@RequestParam("studentId") Integer sttudentId,
@@ -52,6 +55,15 @@ public class CourseController {
 		CourseStudents courseStudents =  courseService.getStudentsFromCourse(courseId);
 		
 		return new ResponseEntity<CourseStudents>(courseStudents,HttpStatus.OK) ;
+	}
+	
+	@PreAuthorize("hasRole('ADMIN')")
+	@DeleteMapping("/courses/")
+	public ResponseEntity<CourseDTO> removeCourseHandler(@RequestParam Integer courseId) throws CourseException {
+		
+		CourseDTO removedCourse =  courseService.removeCourse(courseId);
+		
+		return new ResponseEntity<CourseDTO>(removedCourse,HttpStatus.OK) ;
 	}
 	
 	@GetMapping("/courses/topic")

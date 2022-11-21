@@ -2,6 +2,8 @@ package com.commons.app.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,7 +34,7 @@ public class StudentController {
 
 	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/students/")
-	public ResponseEntity<StudentDTO> registerStudentHandler(@RequestBody StudentDTO studentDTO)
+	public ResponseEntity<StudentDTO> registerStudentHandler(@Valid @RequestBody StudentDTO studentDTO)
 			throws StudentException, UserException {
 
 		StudentDTO registredStudent = studentService.registerStudent(studentDTO);
@@ -59,11 +62,20 @@ public class StudentController {
 	}
 
 	@PatchMapping("/students/update/address")
-	public ResponseEntity<StudentDTO> updateAddressHandler(@RequestBody StudentAddressDTO studentAddressDTO)
+	public ResponseEntity<StudentDTO> updateAddressHandler(@Valid @RequestBody StudentAddressDTO studentAddressDTO)
 			throws StudentException {
 
 		StudentDTO studentDTO = studentService.updateStudentAddress(studentAddressDTO);
 
+		return new ResponseEntity<StudentDTO>(studentDTO, HttpStatus.OK);
+	}
+	
+	@PutMapping("/students/add/address")
+	public ResponseEntity<StudentDTO> addAddressHandler(@Valid @RequestBody StudentAddressDTO studentAddressDTO)
+			throws StudentException {
+
+		StudentDTO studentDTO = studentService.addNewAddress(studentAddressDTO);
+		
 		return new ResponseEntity<StudentDTO>(studentDTO, HttpStatus.OK);
 	}
 

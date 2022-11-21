@@ -34,7 +34,6 @@ public class Student {
 	private String mobileNumber;
 	private LocalDate dob;
 	private Gender gender;
-	private String unique_student_code;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Address> address = new ArrayList<>();
@@ -45,8 +44,7 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", fatherName=" + fatherName + ", email=" + email + ", mobileNumber="
-				+ mobileNumber + ", dob=" + dob + ", gender=" + gender + ", unique_student_code=" + unique_student_code
-				+ ", address=" + address + "]";
+				+ mobileNumber + ", dob=" + dob + ", gender=" + gender + ", address=" + address + "]";
 	}
 
 	
@@ -54,3 +52,5 @@ public class Student {
 	
 	
 }
+
+//	private String unique_student_code;

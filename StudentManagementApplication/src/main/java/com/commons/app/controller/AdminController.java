@@ -1,5 +1,7 @@
 package com.commons.app.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +17,13 @@ import com.commons.app.service.UserService;
 
 
 @RestController
-//@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
 	private UserService userService;
 	
 	@PostMapping("/admin/register")
-	public ResponseEntity<UserDTO> registerAdminHandler(@RequestBody UserDTO userDTO	) throws AdminExcepttion, UserException {
+	public ResponseEntity<UserDTO> registerAdminHandler(@Valid @RequestBody UserDTO userDTO	) throws AdminExcepttion, UserException {
 		
 		UserDTO registeredUser =  userService.registerUser(userDTO) ;
 		

@@ -18,9 +18,9 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<MyErrorDetails> dataValidataionException(MethodArgumentNotValidException e,WebRequest req) {
 		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), "Validation Error", HttpStatus.NON_AUTHORITATIVE_INFORMATION, e.getBindingResult().getFieldError().getDefaultMessage()) ;
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), "Validation Error", HttpStatus.BAD_REQUEST, e.getBindingResult().getFieldError().getDefaultMessage()) ;
 		
-		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.NON_AUTHORITATIVE_INFORMATION);
+		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
 	}
 	
 	@ExceptionHandler(StudentException.class)
@@ -48,6 +48,20 @@ public class GlobalExceptionHandler {
 				
 		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(UserException.class)
+	public ResponseEntity<MyErrorDetails> userExceptionHandler(UserException ce, WebRequest req){
+		
+		
+		MyErrorDetails err= new MyErrorDetails();
+			err.setTimeStamp(LocalDateTime.now());
+			err.setMessage(ce.getMessage());
+			err.setHttpStatus(HttpStatus.NOT_FOUND);
+			err.setDetails(req.getDescription(false));
+				
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.NOT_FOUND);
+	}
+	
 	
 	
 	@ExceptionHandler(Exception.class)

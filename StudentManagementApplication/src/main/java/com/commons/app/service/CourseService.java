@@ -17,4 +17,8 @@ public interface CourseService {
 	public CourseStudents getStudentsFromCourse(Integer courseId) throws CourseException;
 	
 	public List<CourseDTO> getCoursesByTopic(String topicName) throws CourseException;
+	
+	public CourseDTO removeCourse(Integer courseId) throws CourseException;
+	
+	
 }

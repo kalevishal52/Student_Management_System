@@ -29,4 +29,8 @@ public interface StudentService {
 	public StudentCourse getStudentCourses(Integer studentId,String dateOfBirth) throws StudentException;
 	
 	public StudentCourse leaveCourse(Integer studentId,String dateOfBirth,Integer courseId) throws StudentException, CourseException;
+	
+	public StudentCourse coursesToStudentCourse(List<Course> courses,Student student) ;
+	
+	public StudentDTO addNewAddress(StudentAddressDTO addressDTO) throws StudentException;
 }
