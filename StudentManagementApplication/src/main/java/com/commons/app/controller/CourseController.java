@@ -26,7 +26,8 @@ import com.commons.app.service.CourseService;
 @RestController
 public class CourseController {
 
-	@Autowired
+	
+	@Autowired(required = false)
 	private CourseService courseService;
 	
 	@PreAuthorize("hasRole('ADMIN')")
